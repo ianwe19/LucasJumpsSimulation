@@ -7,6 +7,7 @@
 class Board {
 private:
 	std::vector<int> boardArray;
+	int moveCount;
 
 public:
 	Board();
@@ -14,9 +15,11 @@ public:
 	int getSlotState(int);
 	int getColor();
 	int getWhitePos();
+	int getMoveCount();
 
 	bool setWhitePos();
 
+	bool incrementMoveCount();
 	bool moveToken(int);
 	bool isSolved();
 	bool isGimped();

@@ -23,7 +23,15 @@ int Board::getWhitePos() {
 	return 0;
 }
 
+int Board::getMoveCount() {
+
+}
+
 bool Board::setWhitePos() {
+	return false;
+}
+
+bool Board::incrementMoveCount() {
 	return false;
 }
 

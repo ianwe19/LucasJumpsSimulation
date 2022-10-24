@@ -5,6 +5,7 @@
 
 void printBoard(Board);
 
+
 int main()
 {
     Board board0;
