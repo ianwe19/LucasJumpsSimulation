@@ -9,6 +9,7 @@ const int BLUE = 2;
 
 Board::Board() {
 	this->boardArray = { RED, RED, RED, WHITE, BLUE, BLUE, BLUE };
+	this->moveCount = 0;
 }
 
 int Board::getSlotState(int slot) {
@@ -24,15 +25,15 @@ int Board::getWhitePos() {
 }
 
 int Board::getMoveCount() {
-
+	return 0;
 }
 
 bool Board::setWhitePos() {
 	return false;
 }
 
-bool Board::incrementMoveCount() {
-	return false;
+void Board::incrementMoveCount() {
+	this->moveCount++;
 }
 
 bool Board::moveToken(int pos) {

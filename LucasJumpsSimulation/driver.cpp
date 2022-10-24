@@ -18,4 +18,5 @@ void printBoard(Board board0) {
     for (int i = 0; i < 7; i++) {
         std::cout << board0.getSlotState(i) << " ";
     }
+    std::cout << "\nMove count: " << board0.getMoveCount();
 }

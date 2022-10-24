@@ -19,7 +19,7 @@ public:
 
 	bool setWhitePos();
 
-	bool incrementMoveCount();
+	void incrementMoveCount();
 	bool moveToken(int);
 	bool isSolved();
 	bool isGimped();
