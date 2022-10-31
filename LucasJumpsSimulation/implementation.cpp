@@ -1,5 +1,8 @@
 #include "specification.h"
+#include <iostream>
 
+
+const int PUZZLE_SIZE = 7;
 
 const int RED = 0;
 const int WHITE = 1;
@@ -20,7 +23,16 @@ Board::Board() {
 }
 
 int Board::getInput() {
-	return 0;
+	int num = 0;
+
+	while (!(std::cin) || num < 1 || num > PUZZLE_SIZE) { // for input sanitization
+		std::cin.clear();
+		std::cout << "Enter a slot number to move (1-7): ";
+		std::cin >> num;
+		rewind(stdin); // clear buffer
+	}
+
+	return num;
 }
 
 int Board::getSlotState(int slot) {
