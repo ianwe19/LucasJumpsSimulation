@@ -12,6 +12,10 @@ Board::Board() {
 	this->moveCount = 0;
 }
 
+int getInput() {
+
+}
+
 int Board::getSlotState(int slot) {
 	return this->boardArray[slot];
 }

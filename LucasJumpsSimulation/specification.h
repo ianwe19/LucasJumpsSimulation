@@ -6,12 +6,13 @@
 
 class Board {
 private:
-	std::vector<int> boardArray;
+	std::vector<int> boardArray; // use array
 	int moveCount;
 
 public:
 	Board();
 
+	int getInput();
 	int getSlotState(int);
 	int getColor();
 	int getWhitePos();
