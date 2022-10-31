@@ -21,7 +21,7 @@ Board::Board() {
 }
 
 int Board::getInput() {
-
+	return 0;
 }
 
 int Board::getSlotState(int slot) {
