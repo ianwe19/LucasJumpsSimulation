@@ -1,5 +1,4 @@
 #include "specification.h"
-#include <vector>
 
 
 const int RED = 0;
