@@ -22,6 +22,7 @@ Board::Board() {
 	this->moveCount = 0;
 }
 
+
 int Board::getInput() {
 	int num = 0;
 
@@ -35,31 +36,38 @@ int Board::getInput() {
 	return num;
 }
 
+
 int Board::getSlotState(int slot) {
 	return this->theBoard[slot];
 }
+
 
 int Board::getColor(int slot) {
 	return 0;
 }
 
+
 int Board::getWhitePos() {
 	return 0;
 }
 
+
 int Board::getMoveCount() {
-	return 0;
+	return this->moveCount;
 }
+
 
 bool Board::setWhitePos() {
 	return false;
 }
 
+
 void Board::incrementMoveCount() {
 	this->moveCount++;
 }
 
-bool Board::moveToken(int pos) {
+
+bool Board::moveToken(int slot) {
 	return false;
 }
 
@@ -85,6 +93,7 @@ bool Board::isSolved() {
 
 	return true;
 }
+
 
 bool Board::isGimped() {
 	return false;
