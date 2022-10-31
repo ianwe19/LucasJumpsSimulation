@@ -8,7 +8,9 @@ const int BLUE = 2;
 
 
 Board::Board() {
-	this->boardArray = { RED, RED, RED, WHITE, BLUE, BLUE, BLUE };
+
+	this->boardArray[0] = RED; // do not use vector
+
 	this->moveCount = 0;
 }
 
