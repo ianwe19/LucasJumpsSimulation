@@ -9,17 +9,23 @@ const int BLUE = 2;
 
 Board::Board() {
 
-	this->boardArray[0] = RED; // do not use vector
+	this->theBoard[0] = RED;
+	this->theBoard[1] = RED;
+	this->theBoard[2] = RED;
+	this->theBoard[3] = WHITE;
+	this->theBoard[4] = BLUE;
+	this->theBoard[5] = BLUE;
+	this->theBoard[6] = BLUE;
 
 	this->moveCount = 0;
 }
 
-int getInput() {
+int Board::getInput() {
 
 }
 
 int Board::getSlotState(int slot) {
-	return this->boardArray[slot];
+	return this->theBoard[slot];
 }
 
 int Board::getColor() {

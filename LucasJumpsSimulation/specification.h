@@ -1,12 +1,10 @@
 #ifndef __BOARD__
 #define __BOARD__
 
-#include <vector>
-
 
 class Board {
 private:
-	std::vector<int> boardArray; // use array
+	int theBoard[7];
 	int moveCount;
 
 public:
