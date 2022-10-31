@@ -15,6 +15,10 @@ int main()
     printBoard(board0);
 
     slotNum = board0.getInput();
+
+    if (board0.isSolved()) {
+        std::cout << "\nSolved\n";
+    }
 }
 
 

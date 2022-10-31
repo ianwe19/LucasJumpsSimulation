@@ -63,16 +63,26 @@ bool Board::moveToken(int pos) {
 	return false;
 }
 
-bool Board::isSolved() {
-	int counter = 1;
 
+bool Board::isSolved() {
 	for (int i = 0; i < BOARD_SIZE; i++) {
-		if (this->theBoard[i] != counter) {
-			return false;
-			break;
+		if (i <= 2) {
+			if (this->theBoard[i] != RED) {
+				return false;
+			}
 		}
-		counter++;
+		else if (i == 3) {
+			if (this->theBoard[i] != WHITE) {
+				return false;
+			}
+		}
+		else {
+			if (this->theBoard[i] != BLUE) {
+				return false;
+			}
+		}
 	}
+
 	return true;
 }
 
