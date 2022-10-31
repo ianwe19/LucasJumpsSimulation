@@ -12,7 +12,7 @@ public:
 
 	int getInput();
 	int getSlotState(int);
-	int getColor();
+	int getColor(int);
 	int getWhitePos();
 	int getMoveCount();
 

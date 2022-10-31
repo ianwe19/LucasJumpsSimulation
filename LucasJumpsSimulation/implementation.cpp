@@ -2,11 +2,11 @@
 #include <iostream>
 
 
-const int PUZZLE_SIZE = 7;
+const int BOARD_SIZE = 7;
 
-const int RED = 0;
-const int WHITE = 1;
-const int BLUE = 2;
+const int RED = 11;
+const int WHITE = 22;
+const int BLUE = 33;
 
 
 Board::Board() {
@@ -25,7 +25,7 @@ Board::Board() {
 int Board::getInput() {
 	int num = 0;
 
-	while (!(std::cin) || num < 1 || num > PUZZLE_SIZE) { // for input sanitization
+	while (!(std::cin) || num < 1 || num > BOARD_SIZE) { // for input sanitization
 		std::cin.clear();
 		std::cout << "Enter a slot number to move (1-7): ";
 		std::cin >> num;
@@ -39,7 +39,7 @@ int Board::getSlotState(int slot) {
 	return this->theBoard[slot];
 }
 
-int Board::getColor() {
+int Board::getColor(int slot) {
 	return 0;
 }
 
@@ -64,7 +64,16 @@ bool Board::moveToken(int pos) {
 }
 
 bool Board::isSolved() {
-	return false;
+	int counter = 1;
+
+	for (int i = 0; i < BOARD_SIZE; i++) {
+		if (this->theBoard[i] != counter) {
+			return false;
+			break;
+		}
+		counter++;
+	}
+	return true;
 }
 
 bool Board::isGimped() {
